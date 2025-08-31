@@ -7,6 +7,11 @@
 [![Telethon](https://img.shields.io/badge/Telethon-1.34.0-blue.svg)](https://github.com/LonamiWebs/Telethon)
 [![Google Docs API](https://img.shields.io/badge/Google%20Docs%20API-v1-green.svg)](https://developers.google.com/docs/api)
 
+## 🌍 Languages / Языки
+
+- 🇺🇸 [English](README.md) (this file)
+- 🇷🇺 [Русский](README_RU.md)
+
 ## ✨ Features
 
 - 🔄 **Real-time archiving** of Telegram channel messages
@@ -53,7 +58,7 @@
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/telegram-to-gdocs-archiver.git
+git clone https://github.com/ergon73/telegram-to-gdocs-archiver.git
 cd telegram-to-gdocs-archiver
 ```
 
