@@ -1,8 +1,28 @@
 """Telegram data models with enhanced link handling."""
-from pydantic import BaseModel, Field
 from datetime import datetime
 from typing import Optional
 import re
+
+# Optional pydantic import with fallback for lightweight testing environments
+try:  # pragma: no cover - import-time guard
+    from pydantic import BaseModel, Field  # type: ignore
+except Exception:  # pragma: no cover
+    def Field(default=None, **_kwargs):  # type: ignore
+        return default
+
+    class BaseModel:  # minimal fallback, only for tests
+        def __init__(self, **data):
+            for key, value in data.items():
+                setattr(self, key, value)
+
+
+class TelegramMessage(BaseModel):
+    """Minimal Telegram message model used by tests and simple handlers."""
+
+    id: int
+    date: str
+    sender_id: int
+    text: str
 
 class MessageData(BaseModel):
     """Represents a Telegram message with link support."""
